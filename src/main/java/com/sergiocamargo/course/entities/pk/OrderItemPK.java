@@ -15,6 +15,8 @@ import jakarta.persistence.ManyToOne;
 public class OrderItemPK implements Serializable
 {
 	private static final long serialVersionUID = 1L;
+	
+	
 
 	@ManyToOne
 	@JoinColumn(name = "order_id")
@@ -52,9 +54,6 @@ public class OrderItemPK implements Serializable
 		OrderItemPK other = (OrderItemPK) obj;
 		return Objects.equals(order, other.order) && Objects.equals(product, other.product);
 	}
-	
-	
-	
 	
 
 }
